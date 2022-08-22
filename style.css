@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -5,26 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-main {
-  background-image:
-    url(images/bg-card-front.png),
-    url(images/bg-card-back.png),
-    url(images/bg-main-mobile.png);
-  background-repeat: no-repeat;
-  background-size:
-    18rem,
-    18rem,
-    100% 15rem;
-  background-position:
-    left 1rem top 9rem,
-    right 1rem top 3rem,
-    top;
-}
-
-main>* {
-  padding-top: 23rem;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 form>* {
