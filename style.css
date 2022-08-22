@@ -7,6 +7,16 @@ body {
   padding: 0;
 }
 
+main {
+  background-image: url(images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 100% 30vh;
+}
+
+main>* {
+  padding-top: 40%;
+}
+
 form>* {
   display: block;
 }
