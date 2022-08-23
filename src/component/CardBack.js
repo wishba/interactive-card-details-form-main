@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function CardBack() {
+export default function CardBack(props) {
   return (
     <section>
-      <p>000</p>
+      <p>{props.cardCVC ? props.cardCVC : '000'}</p>
     </section>
   )
 }

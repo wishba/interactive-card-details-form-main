@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import CardBack from './CardBack';
 import CardFront from './CardFront';
 
 export default function CardForm() {
@@ -6,6 +7,7 @@ export default function CardForm() {
   const [cardName, setCardName] = useState('Jane Appleseed');
   const [cardM, setCardM] = useState('00');
   const [cardY, setCardY] = useState('00');
+  const [cardCVC, setCardCVC] = useState('000');
   return (
     <section>
       <CardFront
@@ -13,6 +15,9 @@ export default function CardForm() {
         cardName={cardName}
         cardM={cardM}
         cardY={cardY}
+      />
+      <CardBack
+        cardCVC={cardCVC}
       />
       <input
         type="text"
@@ -42,6 +47,13 @@ export default function CardForm() {
           setCardY(e.target.value);
         }}
       />
+      <input
+        type="text"
+        placeholder="e.g. 123"
+        onChange={(e) => {
+          setCardCVC(e.target.value);
+        }}
+      />
       {/* <form>
         <label>Cardholder Name</label>
         <label>Card Number</label>
@@ -51,10 +63,6 @@ export default function CardForm() {
           placeholder="MM"
         />
         <label>CVC</label>
-        <input
-          type="text"
-          placeholder="e.g. 123"
-        />
         <input
           type="submit"
           value="Confirm"
