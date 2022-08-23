@@ -15,7 +15,7 @@ function App() {
         </section>
 
         <section>
-          <form action="complete.html" method="get">
+          <form>
             <label>Cardholder Name</label>
             <input type="text" placeholder="e.g. Jane Appleseed" />
             <label>Card Number</label>
