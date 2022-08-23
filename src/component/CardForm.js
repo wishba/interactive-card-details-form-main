@@ -6,6 +6,13 @@ export default function CardForm() {
   return (
     <section>
       <CardFront cardNumber={cardNumber} />
+      <input
+        type='text'
+        placeholder="e.g. 1234 5678 9123 0000"
+        onChange={(e) => {
+          setCardNumber(e.target.value);
+        }}
+      />
       {/* <form>
         <label>Cardholder Name</label>
         <input
@@ -13,14 +20,6 @@ export default function CardForm() {
           placeholder="e.g. Jane Appleseed"
         />
         <label>Card Number</label>
-        <input
-          type="text"
-          placeholder="e.g. 1234 5678 9123 0000"
-          onChange={(e) => {
-            console.log(e.target.value);
-            setCardNumber(e.target.value);
-          }}
-        />
         <label>Exp. Date (MM/YY)</label>
         <input
           type="text"
@@ -40,13 +39,6 @@ export default function CardForm() {
           value="Confirm"
         />
       </form> */}
-      <input
-        type='text'
-        onChange={(e) => {
-          console.log(e.target.value);
-          setCardNumber(e.target.value);
-        }}
-      />
     </section>
   )
 }
