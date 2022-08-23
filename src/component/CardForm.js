@@ -3,7 +3,7 @@ import CardBack from './CardBack';
 import CardFront from './CardFront';
 
 export default function CardForm() {
-  const formSubmitted = false;
+  let formSubmitted = false;
   const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
   const [cardName, setCardName] = useState('Jane Appleseed');
   const [cardM, setCardM] = useState('00');
