@@ -3,6 +3,7 @@ import CardBack from './CardBack';
 import CardFront from './CardFront';
 
 export default function CardForm() {
+  const formSubmitted = false;
   const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
   const [cardName, setCardName] = useState('Jane Appleseed');
   const [cardM, setCardM] = useState('00');
@@ -19,41 +20,51 @@ export default function CardForm() {
       <CardBack
         cardCVC={cardCVC}
       />
-      <input
-        type="text"
-        placeholder="e.g. Jane Appleseed"
-        onChange={(e) => {
-          setCardName(e.target.value);
-        }}
-      />
-      <input
-        type='text'
-        placeholder="e.g. 1234 5678 9123 0000"
-        onChange={(e) => {
-          setCardNumber(e.target.value);
-        }}
-      />
-      <input
-        type="text"
-        placeholder="MM"
-        onChange={(e) => {
-          setCardM(e.target.value);
-        }}
-      />
-      <input
-        type="text"
-        placeholder="YY"
-        onChange={(e) => {
-          setCardY(e.target.value);
-        }}
-      />
-      <input
-        type="text"
-        placeholder="e.g. 123"
-        onChange={(e) => {
-          setCardCVC(e.target.value);
-        }}
-      />
+
+      {formSubmitted ?
+        <p>thamk</p>
+        :
+        <>
+          <input
+            type="text"
+            placeholder="e.g. Jane Appleseed"
+            onChange={(e) => {
+              setCardName(e.target.value);
+            }}
+          />
+          <input
+            type='text'
+            placeholder="e.g. 1234 5678 9123 0000"
+            onChange={(e) => {
+              setCardNumber(e.target.value);
+            }}
+          />
+          <input
+            type="text"
+            placeholder="MM"
+            onChange={(e) => {
+              setCardM(e.target.value);
+            }}
+          />
+          <input
+            type="text"
+            placeholder="YY"
+            onChange={(e) => {
+              setCardY(e.target.value);
+            }}
+          />
+          <input
+            type="text"
+            placeholder="e.g. 123"
+            onChange={(e) => {
+              setCardCVC(e.target.value);
+            }}
+          />
+        </>
+      }
+
+      <button type="submit">Continue</button>
+
       {/* <form>
         <label>Cardholder Name</label>
         <label>Card Number</label>
