@@ -4,11 +4,15 @@ import CardFront from './CardFront';
 export default function CardForm() {
   const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
   const [cardName, setCardName] = useState('Jane Appleseed');
+  const [cardM, setCardM] = useState('00');
+  const [cardY, setCardY] = useState('00');
   return (
     <section>
       <CardFront
         cardNumber={cardNumber}
         cardName={cardName}
+        cardM={cardM}
+        cardY={cardY}
       />
       <input
         type="text"
@@ -24,6 +28,20 @@ export default function CardForm() {
           setCardNumber(e.target.value);
         }}
       />
+      <input
+        type="text"
+        placeholder="MM"
+        onChange={(e) => {
+          setCardM(e.target.value);
+        }}
+      />
+      <input
+        type="text"
+        placeholder="YY"
+        onChange={(e) => {
+          setCardY(e.target.value);
+        }}
+      />
       {/* <form>
         <label>Cardholder Name</label>
         <label>Card Number</label>
@@ -31,10 +49,6 @@ export default function CardForm() {
         <input
           type="text"
           placeholder="MM"
-        />
-        <input
-          type="text"
-          placeholder="YY"
         />
         <label>CVC</label>
         <input
