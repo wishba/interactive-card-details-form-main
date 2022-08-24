@@ -14,45 +14,52 @@ p {
   margin: 0;
 }
 
-.card__front-container {
-  display: none;
-  background-image:
-    url(images/card-logo.svg),
-    url(images/bg-card-front.png);
-  background-size:
-    3em,
-    contain;
-  background-position:
-    left 1em top 1em,
-    left top;
-  background-repeat: no-repeat;
-  height: 8em;
+.card__front {
+  position: absolute;
+  top: 7.5em;
+  left: 50%;
+  transform: translateX(-60%);
 }
 
-.card__front {
-  padding-top: 4em;
-  padding-left: 1em;
+.card__front-bg {
+  content: url(images/bg-card-front.png);
+  width: 18em;
+}
+
+.card__front-logo {
+  content: url(images/card-logo.svg);
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.card__front-text {
+  position: absolute;
+  top: 6em;
+  left: 1em;
 }
 
 .card__front-date {
-  padding-left: 1em;
-}
-
-.card__back-container {
-  position: relative;
-  top: 1.5em;
-  left: 50%;
-  transform: translateX(-20%);
+  padding-left: 2em;
 }
 
 .card__back {
-  background-image: url(images/bg-card-back.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 8em;
+  position: absolute;
+  z-index: -1;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-40%);
+}
 
-  padding-top: 3.3em;
-  padding-left: 11em;
+.card__back-bg {
+  content: url(images/bg-card-back.png);
+  width: 18em;
+}
+
+.card__back-text {
+  position: absolute;
+  top: 4.2em;
+  right: 2em;
 }
 
 #fillForm>* {

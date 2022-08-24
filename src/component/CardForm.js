@@ -22,7 +22,7 @@ export default function CardForm() {
         />
       </section>
 
-      <section>
+      {/* <section>
         <div id='fillForm'>
           <label>CARDHOLDER NAME</label>
           <input type="text"
@@ -68,9 +68,9 @@ export default function CardForm() {
             document.getElementById('completedForm').style.display = 'block';
           }}
         >Confirm</button>
-      </section>
+      </section> */}
 
-      <section id='completedForm'>
+      {/* <section id='completedForm'>
         <h1>THANK YOU!</h1>
         <p>We've added your card details</p>
         <button id='continueButton'
@@ -80,7 +80,7 @@ export default function CardForm() {
             document.getElementById('completedForm').style.display = 'none';
           }}
         >Continue</button>
-      </section>
+      </section> */}
     </>
   )
 }
