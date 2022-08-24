@@ -58,29 +58,28 @@ export default function CardForm() {
               setCardCVC(e.target.value);
             }}
           />
-
-          <button id='confirmButton'
-            type="submit"
-            onClick={() => {
-              document.getElementById('fillForm').style.display = 'none';
-              document.getElementById('confirmButton').style.display = 'none';
-              document.getElementById('completedForm').style.display = 'block';
-            }}
-          >Confirm</button>
         </div>
+
+        <button id='confirmButton'
+          type="submit"
+          onClick={() => {
+            document.getElementById('fillForm').style.display = 'none';
+            document.getElementById('confirmButton').style.display = 'none';
+            document.getElementById('completedForm').style.display = 'block';
+          }}
+        >Confirm</button>
       </section>
 
-      <section>
-        <div id='completedForm'>
-          <p>thamk</p>
-          <button id='continueButton'
-            onClick={() => {
-              document.getElementById('fillForm').style.display = 'block';
-              document.getElementById('confirmButton').style.display = 'block';
-              document.getElementById('completedForm').style.display = 'none';
-            }}
-          >Continue</button>
-        </div>
+      <section id='completedForm'>
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details</p>
+        <button id='continueButton'
+          onClick={() => {
+            document.getElementById('fillForm').style.display = 'block';
+            document.getElementById('confirmButton').style.display = 'block';
+            document.getElementById('completedForm').style.display = 'none';
+          }}
+        >Continue</button>
       </section>
     </>
   )
