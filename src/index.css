@@ -21,6 +21,9 @@ p {
   background-size:
     3em,
     contain;
+  background-position:
+    left 1em top 1em,
+    left top;
   background-repeat: no-repeat;
   height: 8em;
 }
