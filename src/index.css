@@ -14,12 +14,8 @@ p {
   margin: 0;
 }
 
-.card__front {
-  padding-top: 4em;
-  padding-left: 1em;
-}
-
 .card__front-container {
+  display: none;
   background-image:
     url(images/card-logo.svg),
     url(images/bg-card-front.png);
@@ -33,8 +29,20 @@ p {
   height: 8em;
 }
 
+.card__front {
+  padding-top: 4em;
+  padding-left: 1em;
+}
+
 .card__front-date {
   padding-left: 1em;
+}
+
+.card__back-container {
+  position: relative;
+  top: 1.5em;
+  left: 50%;
+  transform: translateX(-20%);
 }
 
 .card__back {
@@ -42,10 +50,8 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   height: 8em;
-}
 
-.card__back>p {
-  padding-top: 3.28em;
+  padding-top: 3.3em;
   padding-left: 11em;
 }
 
