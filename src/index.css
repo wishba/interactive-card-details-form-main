@@ -44,6 +44,11 @@ p {
   height: 8em;
 }
 
+.card__back>p {
+  padding-top: 3.28em;
+  padding-left: 11em;
+}
+
 #fillForm>* {
   display: block;
 }
