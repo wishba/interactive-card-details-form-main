@@ -1,4 +1,3 @@
-import './App.css';
 import CardForm from './component/CardForm';
 
 function App() {
