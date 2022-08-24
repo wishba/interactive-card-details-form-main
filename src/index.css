@@ -10,6 +10,28 @@ body {
   font-family: 'Space Grotesk', sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
+.card__front {
+  background-image:
+    url(images/card-logo.svg),
+    url(images/bg-card-front.png);
+  background-size:
+    3em,
+    contain;
+  background-repeat: no-repeat;
+  height: 8em;
+}
+
+.card__back {
+  background-image: url(images/bg-card-back.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 8em;
+}
+
 #fillForm>* {
   display: block;
 }
