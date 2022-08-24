@@ -15,6 +15,11 @@ p {
 }
 
 .card__front {
+  padding-top: 4em;
+  padding-left: 1em;
+}
+
+.card__front-container {
   background-image:
     url(images/card-logo.svg),
     url(images/bg-card-front.png);
@@ -26,6 +31,10 @@ p {
     left top;
   background-repeat: no-repeat;
   height: 8em;
+}
+
+.card__front-date {
+  padding-left: 1em;
 }
 
 .card__back {
