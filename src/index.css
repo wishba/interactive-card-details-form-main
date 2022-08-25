@@ -93,6 +93,7 @@ p {
 
 #fillForm {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .form__name {
