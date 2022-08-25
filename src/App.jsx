@@ -9,6 +9,10 @@ function App() {
   const [cardY, setCardY] = useState('00');
   const [cardCVC, setCardCVC] = useState('000');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <main className="App">
       <section>
@@ -24,7 +28,7 @@ function App() {
       </section>
 
       <section>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>CARDHOLDER NAME</label>
           <input
             type="text"
