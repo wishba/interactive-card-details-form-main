@@ -9,10 +9,6 @@ function App() {
   const [cardY, setCardY] = useState('00');
   const [cardCVC, setCardCVC] = useState('000');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  }
-
   return (
     <main className="App">
       <section>
@@ -28,45 +24,35 @@ function App() {
       </section>
 
       <section>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e) => { e.preventDefault(); }}>
           <label>CARDHOLDER NAME</label>
-          <input
-            type="text"
+          <input type="text"
             placeholder="e.g. Jane Appleseed"
-            onChange={(e) => {
-              setCardName(e.target.value);
+            onChange={(e) => { setCardName(e.target.value); }}
+            onBlur={(e) => {
+              if (e.target.value == '') {
+                console.log('kosong');
+              }
             }}
           />
           <label>CARD NUMBER</label>
-          <input
-            type='text'
+          <input type='text'
             placeholder="e.g. 1234 5678 9123 0000"
-            onChange={(e) => {
-              setCardNumber(e.target.value);
-            }}
+            onChange={(e) => { setCardNumber(e.target.value); }}
           />
           <label>EXP. DATE (MM/YY)</label>
-          <input
-            type="text"
+          <input type="text"
             placeholder="MM"
-            onChange={(e) => {
-              setCardM(e.target.value);
-            }}
+            onChange={(e) => { setCardM(e.target.value); }}
           />
-          <input
-            type="text"
+          <input type="text"
             placeholder="YY"
-            onChange={(e) => {
-              setCardY(e.target.value);
-            }}
+            onChange={(e) => { setCardY(e.target.value); }}
           />
           <label>CVC</label>
-          <input
-            type="text"
+          <input type="text"
             placeholder="e.g. 123"
-            onChange={(e) => {
-              setCardCVC(e.target.value);
-            }}
+            onChange={(e) => { setCardCVC(e.target.value); }}
           />
           <button type="submit">Confirm</button>
         </form>
