@@ -4,6 +4,7 @@
   --clr-objecttxt: hsl(0, 0%, 100%);
   --clr-formbdr: hsl(270, 3%, 87%);
   --clr-forminput: hsl(279, 6%, 55%);
+  --clr-button: hsl(278, 68%, 11%);
 }
 
 html {
@@ -99,6 +100,14 @@ input {
   font-size: 18px;
   color: var(--clr-forminput);
   border: 1px solid var(--clr-formbdr);
+  border-radius: 5px;
+}
+
+button {
+  padding: 1em;
+  background-color: var(--clr-button);
+  color: var(--clr-objecttxt);
+  border: none;
   border-radius: 5px;
 }
 
