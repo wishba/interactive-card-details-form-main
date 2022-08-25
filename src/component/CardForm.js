@@ -25,35 +25,35 @@ export default function CardForm() {
 
       <section className='form'>
         <div id='fillForm'>
-          <label>CARDHOLDER NAME</label>
-          <input type="text"
+          <label className='form__name'>CARDHOLDER NAME</label>
+          <input className='form__name-in' type="text"
             placeholder="e.g. Jane Appleseed"
             onChange={(e) => {
               setCardName(e.target.value);
             }}
           />
-          <label>CARD NUMBER</label>
-          <input type='text'
+          <label className='form__number'>CARD NUMBER</label>
+          <input className='form__number-in' type='text'
             placeholder="e.g. 1234 5678 9123 0000"
             onChange={(e) => {
               setCardNumber(e.target.value);
             }}
           />
-          <label>EXP. DATE (MM/YY)</label>
-          <input type="text"
+          <label className='form__exp'>EXP. DATE (MM/YY)</label>
+          <input className='form__mm-in' type="text"
             placeholder="MM"
             onChange={(e) => {
               setCardM(e.target.value);
             }}
           />
-          <input type="text"
+          <input className='form__yy-in' type="text"
             placeholder="YY"
             onChange={(e) => {
               setCardY(e.target.value);
             }}
           />
-          <label>CVC</label>
-          <input type="text"
+          <label className='form__cvc'>CVC</label>
+          <input className='form__cvc-in' type="text"
             placeholder="e.g. 123"
             onChange={(e) => {
               setCardCVC(e.target.value);

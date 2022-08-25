@@ -88,8 +88,51 @@ p {
 }
 
 .form {
-  display: grid;
   margin: 0 1rem;
+}
+
+#fillForm {
+  display: grid;
+}
+
+.form__name {
+  grid-area: 1/1/2/5;
+}
+
+.form__name-in {
+  grid-area: 2/1/3/5;
+}
+
+.form__number {
+  grid-area: 3/1/4/5;
+}
+
+.form__number-in {
+  grid-area: 4/1/5/5;
+}
+
+.form__exp {
+  grid-area: 5/1/6/3;
+}
+
+.form__cvc {
+  grid-area: 5/3/6/5;
+}
+
+.form__mm-in {
+  grid-area: 6/1/7/2;
+}
+
+.form__yy-in {
+  grid-area: 6/2/7/3;
+}
+
+.form__cvc-in {
+  grid-area: 6/3/7/5;
+}
+
+#confirmButton {
+  width: 100%;
 }
 
 #completedForm {
