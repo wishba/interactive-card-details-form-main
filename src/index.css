@@ -2,6 +2,8 @@
 
 :root {
   --clr-objecttxt: hsl(0, 0%, 100%);
+  --clr-formbdr: hsl(270, 3%, 87%);
+  --clr-forminput: hsl(279, 6%, 55%);
 }
 
 html {
@@ -91,9 +93,22 @@ p {
   margin: 0 1rem;
 }
 
+input {
+  margin: .5em 0 1.5em;
+  padding: .5em 1em;
+  font-size: 18px;
+  color: var(--clr-forminput);
+  border: 1px solid var(--clr-formbdr);
+  border-radius: 5px;
+}
+
 #fillForm {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#fillForm>* {
+  min-width: 0;
 }
 
 .form__name {
@@ -126,10 +141,12 @@ p {
 
 .form__yy-in {
   grid-area: 6/2/7/3;
+  margin-left: .5em;
 }
 
 .form__cvc-in {
   grid-area: 6/3/7/5;
+  margin-left: 1em;
 }
 
 #confirmButton {
