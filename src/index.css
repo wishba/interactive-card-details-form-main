@@ -159,6 +159,10 @@ input {
   text-align: center;
 }
 
+#completedForm>p {
+  color: var(--clr-forminput);
+}
+
 .complete__icon {
   content: url(images/icon-complete.svg);
   margin: auto;
