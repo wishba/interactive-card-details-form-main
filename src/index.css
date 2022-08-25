@@ -16,6 +16,7 @@ p {
 
 .card__front {
   position: absolute;
+  z-index: 2;
   top: 7.5em;
   left: 50%;
   transform: translateX(-60%);
@@ -45,7 +46,7 @@ p {
 
 .card__back {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 2em;
   left: 50%;
   transform: translateX(-40%);
@@ -60,6 +61,14 @@ p {
   position: absolute;
   top: 4.2em;
   right: 2em;
+}
+
+.card__background {
+  content: url(images/bg-main-mobile.png);
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 15em;
 }
 
 #fillForm>* {

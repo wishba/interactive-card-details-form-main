@@ -11,6 +11,7 @@ export default function CardForm() {
   return (
     <>
       <section>
+        <div className="card__background"></div>
         <CardFront
           cardNumber={cardNumber}
           cardName={cardName}
@@ -22,7 +23,7 @@ export default function CardForm() {
         />
       </section>
 
-      {/* <section>
+      <section>
         <div id='fillForm'>
           <label>CARDHOLDER NAME</label>
           <input type="text"
@@ -68,7 +69,7 @@ export default function CardForm() {
             document.getElementById('completedForm').style.display = 'block';
           }}
         >Confirm</button>
-      </section> */}
+      </section>
 
       {/* <section id='completedForm'>
         <h1>THANK YOU!</h1>
