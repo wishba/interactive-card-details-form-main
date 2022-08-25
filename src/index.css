@@ -79,23 +79,24 @@ p {
 }
 
 .form {
-  /* box-sizing: border-box; */
   display: grid;
   margin: 0 1rem;
 }
 
-#fillForm>* {
-  /* width: 100%; */
-  /* box-sizing: border-box; */
-}
-
-input {
-  /* width: 100%; */
-  /* box-sizing: border-box; */
-}
-
 #completedForm {
   display: none;
+  margin: 0 1em;
+  text-align: center;
+}
+
+.complete__icon {
+  content: url(images/icon-complete.svg);
+  margin: auto;
+}
+
+#continueButton {
+  width: 100%;
+  margin-top: 3em;
 }
 
 .attribution {

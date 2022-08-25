@@ -72,6 +72,7 @@ export default function CardForm() {
       </section>
 
       <section id='completedForm'>
+        <div className="complete__icon"></div>
         <h1>THANK YOU!</h1>
         <p>We've added your card details</p>
         <button id='continueButton'
