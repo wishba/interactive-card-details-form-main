@@ -23,7 +23,7 @@ export default function CardForm() {
         />
       </section>
 
-      <section>
+      <section className='form'>
         <div id='fillForm'>
           <label>CARDHOLDER NAME</label>
           <input type="text"
@@ -71,17 +71,17 @@ export default function CardForm() {
         >Confirm</button>
       </section>
 
-      {/* <section id='completedForm'>
+      <section id='completedForm'>
         <h1>THANK YOU!</h1>
         <p>We've added your card details</p>
         <button id='continueButton'
           onClick={() => {
-            document.getElementById('fillForm').style.display = 'block';
-            document.getElementById('confirmButton').style.display = 'block';
+            document.getElementById('fillForm').style.display = 'grid';
+            document.getElementById('confirmButton').style.display = 'grid';
             document.getElementById('completedForm').style.display = 'none';
           }}
         >Continue</button>
-      </section> */}
+      </section>
     </>
   )
 }

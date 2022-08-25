@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
-* {
+html {
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -72,8 +78,20 @@ p {
   margin-bottom: 5em;
 }
 
+.form {
+  /* box-sizing: border-box; */
+  display: grid;
+  margin: 0 1rem;
+}
+
 #fillForm>* {
-  display: block;
+  /* width: 100%; */
+  /* box-sizing: border-box; */
+}
+
+input {
+  /* width: 100%; */
+  /* box-sizing: border-box; */
 }
 
 #completedForm {
