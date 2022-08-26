@@ -9,6 +9,24 @@ function App() {
   const [cardY, setCardY] = useState('00');
   const [cardCVC, setCardCVC] = useState('000');
 
+  const checkEmpty = (e) => {
+    if (e.target.value === '') {
+      document.getElementById('errorName').innerHTML = `Can't be blank`;
+    } else {
+      document.getElementById('errorName').innerHTML = `correct format`;
+    }
+  }
+
+  const checkNumber = (e) => {
+    if (e.target.value === '') {
+      document.getElementById('errorNumber').innerHTML = `Can't be blank`;
+    } else if (isNaN(e.target.value)) {
+      document.getElementById('errorNumber').innerHTML = `Wrong format, numbers only`;
+    } else {
+      document.getElementById('errorNumber').innerHTML = `correct format`;
+    }
+  }
+
   return (
     <main className="App">
       <section>
@@ -30,11 +48,7 @@ function App() {
             placeholder="e.g. Jane Appleseed"
             required
             onChange={(e) => { setCardName(e.target.value); }}
-            onBlur={(e) => {
-              if (e.target.value === '') {
-                document.getElementById('errorName').innerHTML = `Can't be blank`;
-              } // else, if input is not a number, not 3 digit, etc etc
-            }}
+            onBlur={checkEmpty}
           />
           <p id='errorName'>error message</p>
 
@@ -43,16 +57,7 @@ function App() {
             placeholder="e.g. 1234 5678 9123 0000"
             required
             onChange={(e) => { setCardNumber(e.target.value); }}
-            onBlur={(e) => {
-              if (e.target.value === '') {
-                document.getElementById('errorNumber').innerHTML = `Can't be blank`;
-              } else if (isNaN(e.target.value)) {
-                // else, if input is not a number, not 3 digit, etc etc
-                document.getElementById('errorNumber').innerHTML = `Wrong format, numbers only`;
-              } else {
-                document.getElementById('errorNumber').innerHTML = `Wrong format`;
-              }
-            }}
+            onBlur={checkNumber}
           />
           <p id="errorNumber">error message</p>
 
