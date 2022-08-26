@@ -31,7 +31,7 @@ function App() {
             required
             onChange={(e) => { setCardName(e.target.value); }}
             onBlur={(e) => {
-              if (e.target.value == '') {
+              if (e.target.value === '') {
                 document.getElementById('errorName').innerHTML = `Can't be blank`;
               } // else, if input is not a number, not 3 digit, etc etc
             }}
@@ -41,8 +41,20 @@ function App() {
           <label>CARD NUMBER</label>
           <input type='text'
             placeholder="e.g. 1234 5678 9123 0000"
+            required
             onChange={(e) => { setCardNumber(e.target.value); }}
+            onBlur={(e) => {
+              if (e.target.value === '') {
+                document.getElementById('errorNumber').innerHTML = `Can't be blank`;
+              } else if (isNaN(e.target.value)) {
+                // else, if input is not a number, not 3 digit, etc etc
+                document.getElementById('errorNumber').innerHTML = `Wrong format, numbers only`;
+              } else {
+                document.getElementById('errorNumber').innerHTML = `Wrong format`;
+              }
+            }}
           />
+          <p id="errorNumber">error message</p>
 
           <label>EXP. DATE (MM/YY)</label>
           <input type="text"
