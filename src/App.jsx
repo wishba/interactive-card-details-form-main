@@ -44,6 +44,7 @@ function App() {
           <input type='text'
             placeholder="e.g. 1234 5678 9123 0000"
             required
+            maxLength={12}
             onChange={(e) => { setCardNumber(e.target.value); }}
             onBlur={(e) => {
               if (e.target.value === '') {
@@ -61,6 +62,7 @@ function App() {
           <input type="text"
             placeholder="MM"
             required
+            maxLength={2}
             onChange={(e) => { setCardM(e.target.value); }}
             onBlur={(e) => {
               if (e.target.value === '') {
@@ -76,6 +78,7 @@ function App() {
           <input type="text"
             placeholder="YY"
             required
+            maxLength={2}
             onChange={(e) => { setCardY(e.target.value); }}
             onBlur={(e) => {
               if (e.target.value === '') {
@@ -93,6 +96,7 @@ function App() {
           <input type="text"
             placeholder="e.g. 123"
             required
+            maxLength={3}
             onChange={(e) => { setCardCVC(e.target.value); }}
             onBlur={(e) => {
               if (e.target.value === '') {
