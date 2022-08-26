@@ -92,8 +92,19 @@ function App() {
           <label>CVC</label>
           <input type="text"
             placeholder="e.g. 123"
+            required
             onChange={(e) => { setCardCVC(e.target.value); }}
+            onBlur={(e) => {
+              if (e.target.value === '') {
+                document.getElementById('errorCVC').innerHTML = `Can't be blank`;
+              } else if (isNaN(e.target.value)) {
+                document.getElementById('errorCVC').innerHTML = `Wrong format, numbers only`;
+              } else {
+                document.getElementById('errorCVC').innerHTML = `Correct format`;
+              }
+            }}
           />
+          <p id="errorCVC">error message</p>
 
           <button type="submit">Confirm</button>
         </form>
