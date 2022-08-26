@@ -75,8 +75,19 @@ function App() {
           <p id="errorMM">error message</p>
           <input type="text"
             placeholder="YY"
+            required
             onChange={(e) => { setCardY(e.target.value); }}
+            onBlur={(e) => {
+              if (e.target.value === '') {
+                document.getElementById('errorYY').innerHTML = `Can't be blank`;
+              } else if (isNaN(e.target.value)) {
+                document.getElementById('errorYY').innerHTML = `Wrong format, numbers only`;
+              } else {
+                document.getElementById('errorYY').innerHTML = `Correct format`;
+              }
+            }}
           />
+          <p id="errorYY">error message</p>
 
           <label>CVC</label>
           <input type="text"
