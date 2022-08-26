@@ -9,24 +9,6 @@ function App() {
   const [cardY, setCardY] = useState('00');
   const [cardCVC, setCardCVC] = useState('000');
 
-  const checkEmpty = (e) => {
-    if (e.target.value === '') {
-      document.getElementById('errorName').innerHTML = `Can't be blank`;
-    } else {
-      document.getElementById('errorName').innerHTML = `correct format`;
-    }
-  }
-
-  const checkNumber = (e) => {
-    if (e.target.value === '') {
-      document.getElementById('errorNumber').innerHTML = `Can't be blank`;
-    } else if (isNaN(e.target.value)) {
-      document.getElementById('errorNumber').innerHTML = `Wrong format, numbers only`;
-    } else {
-      document.getElementById('errorNumber').innerHTML = `correct format`;
-    }
-  }
-
   return (
     <main className="App">
       <section>
@@ -48,7 +30,13 @@ function App() {
             placeholder="e.g. Jane Appleseed"
             required
             onChange={(e) => { setCardName(e.target.value); }}
-            onBlur={checkEmpty}
+            onBlur={(e) => {
+              if (e.target.value === '') {
+                document.getElementById('errorName').innerHTML = `Can't be blank`;
+              } else {
+                document.getElementById('errorNumber').innerHTML = `Correct format`;
+              }
+            }}
           />
           <p id='errorName'>error message</p>
 
@@ -57,15 +45,34 @@ function App() {
             placeholder="e.g. 1234 5678 9123 0000"
             required
             onChange={(e) => { setCardNumber(e.target.value); }}
-            onBlur={checkNumber}
+            onBlur={(e) => {
+              if (e.target.value === '') {
+                document.getElementById('errorNumber').innerHTML = `Can't be blank`;
+              } else if (isNaN(e.target.value)) {
+                document.getElementById('errorNumber').innerHTML = `Wrong format, numbers only`;
+              } else {
+                document.getElementById('errorNumber').innerHTML = `Correct format`;
+              }
+            }}
           />
           <p id="errorNumber">error message</p>
 
           <label>EXP. DATE (MM/YY)</label>
           <input type="text"
             placeholder="MM"
+            required
             onChange={(e) => { setCardM(e.target.value); }}
+            onBlur={(e) => {
+              if (e.target.value === '') {
+                document.getElementById('errorMM').innerHTML = `Can't be blank`;
+              } else if (isNaN(e.target.value)) {
+                document.getElementById('errorMM').innerHTML = `Wrong format, numbers only`;
+              } else {
+                document.getElementById('errorMM').innerHTML = `Correct format`;
+              }
+            }}
           />
+          <p id="errorMM">error message</p>
           <input type="text"
             placeholder="YY"
             onChange={(e) => { setCardY(e.target.value); }}
