@@ -28,18 +28,22 @@ function App() {
           <label>CARDHOLDER NAME</label>
           <input type="text"
             placeholder="e.g. Jane Appleseed"
+            required
             onChange={(e) => { setCardName(e.target.value); }}
             onBlur={(e) => {
               if (e.target.value == '') {
-                console.log('kosong');
-              }
+                document.getElementById('errorName').innerHTML = `Can't be blank`;
+              } // else, if input is not a number, not 3 digit, etc etc
             }}
           />
+          <p id='errorName'>error message</p>
+
           <label>CARD NUMBER</label>
           <input type='text'
             placeholder="e.g. 1234 5678 9123 0000"
             onChange={(e) => { setCardNumber(e.target.value); }}
           />
+
           <label>EXP. DATE (MM/YY)</label>
           <input type="text"
             placeholder="MM"
@@ -49,11 +53,13 @@ function App() {
             placeholder="YY"
             onChange={(e) => { setCardY(e.target.value); }}
           />
+
           <label>CVC</label>
           <input type="text"
             placeholder="e.g. 123"
             onChange={(e) => { setCardCVC(e.target.value); }}
           />
+
           <button type="submit">Confirm</button>
         </form>
       </section>
