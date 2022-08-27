@@ -91,7 +91,6 @@ function App() {
               }
             }}
           />
-          <p id="errorMM">error message</p>
           <input type="text"
             placeholder="YY"
             required
@@ -111,6 +110,7 @@ function App() {
               }
             }}
           />
+          <p id="errorMM">error message</p>
           <p id="errorYY">error message</p>
 
           <label>CVC</label>
