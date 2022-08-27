@@ -28,7 +28,8 @@ function App() {
           <label>CARDHOLDER NAME</label>
           <input type="text"
             placeholder="e.g. Jane Appleseed"
-            required
+            // required
+
             onChange={(e) => { setCardName(e.target.value); }}
             onBlur={(e) => {
               if (e.target.value === '') {
@@ -45,8 +46,15 @@ function App() {
             placeholder="e.g. 1234 5678 9123 0000"
             required
             maxLength={16}
+            pattern="[0-9 ]{20}"
+
             onChange={(e) => {
               setCardNumber(e.target.value);
+              setCardNumber(e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim());
+            }}
+
+            onFocus={(e) => {
+              e.target.value = e.target.value.replace(/[^\dA-Z]/g, '');
             }}
 
             onBlur={(e) => {
@@ -66,7 +74,7 @@ function App() {
           <label>EXP. DATE (MM/YY)</label>
           <input type="text"
             placeholder="MM"
-            required
+            // required
             maxLength={2}
             onChange={(e) => { setCardM(e.target.value); }}
             onBlur={(e) => {
@@ -82,7 +90,7 @@ function App() {
           <p id="errorMM">error message</p>
           <input type="text"
             placeholder="YY"
-            required
+            // required
             maxLength={2}
             onChange={(e) => { setCardY(e.target.value); }}
             onBlur={(e) => {
@@ -100,7 +108,7 @@ function App() {
           <label>CVC</label>
           <input type="text"
             placeholder="e.g. 123"
-            required
+            // required
             maxLength={3}
             onChange={(e) => { setCardCVC(e.target.value); }}
             onBlur={(e) => {
