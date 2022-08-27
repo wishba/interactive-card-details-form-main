@@ -44,12 +44,17 @@ function App() {
           <input type='text'
             placeholder="e.g. 1234 5678 9123 0000"
             required
-            maxLength={12}
-            onChange={(e) => { setCardNumber(e.target.value); }}
+            maxLength={16}
+            onChange={(e) => {
+              setCardNumber(e.target.value);
+            }}
+
             onBlur={(e) => {
+              e.target.value = e.target.value.replace(/(.{4})/g, '$1 ');
+
               if (e.target.value === '') {
                 document.getElementById('errorNumber').innerHTML = `Can't be blank`;
-              } else if (isNaN(e.target.value)) {
+              } else if (e.target.value === ' ' && isNaN(e.target.value)) {
                 document.getElementById('errorNumber').innerHTML = `Wrong format, numbers only`;
               } else {
                 document.getElementById('errorNumber').innerHTML = `Correct format`;
