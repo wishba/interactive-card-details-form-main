@@ -36,7 +36,7 @@ function App() {
               if (e.target.value === '') {
                 document.getElementById('errorName').innerHTML = `Can't be blank`;
               } else {
-                document.getElementById('errorNumber').innerHTML = `Correct format`;
+                document.getElementById('errorName').innerHTML = `Correct format`;
               }
             }}
           />
