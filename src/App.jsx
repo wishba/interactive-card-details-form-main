@@ -28,9 +28,10 @@ function App() {
           <label>CARDHOLDER NAME</label>
           <input type="text"
             placeholder="e.g. Jane Appleseed"
-            // required
+            required
 
             onChange={(e) => { setCardName(e.target.value); }}
+
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorName').innerHTML = `Can't be blank`;
@@ -74,9 +75,12 @@ function App() {
           <label>EXP. DATE (MM/YY)</label>
           <input type="text"
             placeholder="MM"
-            // required
+            required
             maxLength={2}
+            pattern="[0-9]{2}"
+
             onChange={(e) => { setCardM(e.target.value); }}
+
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorMM').innerHTML = `Can't be blank`;
@@ -90,9 +94,13 @@ function App() {
           <p id="errorMM">error message</p>
           <input type="text"
             placeholder="YY"
-            // required
+            required
             maxLength={2}
+            pattern="[0-9]{2}"
+            title='3 number'
+
             onChange={(e) => { setCardY(e.target.value); }}
+
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorYY').innerHTML = `Can't be blank`;
@@ -108,9 +116,12 @@ function App() {
           <label>CVC</label>
           <input type="text"
             placeholder="e.g. 123"
-            // required
+            required
             maxLength={3}
+            pattern="[0-9]{3}"
+
             onChange={(e) => { setCardCVC(e.target.value); }}
+
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorCVC').innerHTML = `Can't be blank`;
