@@ -51,11 +51,11 @@ function App() {
 
             onChange={(e) => {
               setCardNumber(e.target.value);
-              setCardNumber(e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim());
+              setCardNumber(e.target.value.replace(/(.{4})/g, '$1 '));
             }}
 
             onFocus={(e) => {
-              e.target.value = e.target.value.replace(/[^\dA-Z]/g, '');
+              e.target.value = e.target.value.replace(/\s/g, '');
             }}
 
             onBlur={(e) => {
@@ -63,7 +63,7 @@ function App() {
 
               if (e.target.value === '') {
                 document.getElementById('errorNumber').innerHTML = `Can't be blank`;
-              } else if (e.target.value === ' ' && isNaN(e.target.value)) {
+              } else if (e.target.value.includes(' ') || e.target.value === ' ' && isNaN(e.target.value)) {
                 document.getElementById('errorNumber').innerHTML = `Wrong format, numbers only`;
               } else {
                 document.getElementById('errorNumber').innerHTML = `Correct format`;
@@ -84,7 +84,7 @@ function App() {
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorMM').innerHTML = `Can't be blank`;
-              } else if (e.target.value.includes(' ') || isNaN(e.target.value)) {
+              } else if (e.target.value.includes('[a-zA-Z]') || e.target.value.includes(' ') || isNaN(e.target.value)) {
                 document.getElementById('errorMM').innerHTML = `Wrong format, numbers only`;
               } else {
                 document.getElementById('errorMM').innerHTML = `Correct format`;
@@ -104,7 +104,7 @@ function App() {
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorYY').innerHTML = `Can't be blank`;
-              } else if (e.target.value.includes(' ') || isNaN(e.target.value)) {
+              } else if (e.target.value.includes('[a-zA-Z]') || e.target.value.includes(' ') || isNaN(e.target.value)) {
                 document.getElementById('errorYY').innerHTML = `Wrong format, numbers only`;
               } else {
                 document.getElementById('errorYY').innerHTML = `Correct format`;
@@ -125,7 +125,7 @@ function App() {
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorCVC').innerHTML = `Can't be blank`;
-              } else if (e.target.value.includes(' ') || isNaN(e.target.value)) {
+              } else if (e.target.value.includes('[a-zA-Z]') || e.target.value.includes(' ') || isNaN(e.target.value)) {
                 document.getElementById('errorCVC').innerHTML = `Wrong format, numbers only`;
               } else {
                 document.getElementById('errorCVC').innerHTML = `Correct format`;
