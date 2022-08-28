@@ -23,3 +23,7 @@ input {
 .form__message.form__message-error {
   visibility: visible;
 }
+
+.form__submitted {
+  display: none;
+}

@@ -13,6 +13,7 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     document.getElementById('form').style.display = 'none';
+    document.getElementById('formSubmitted').style.display = 'block';
   }
 
   return (
@@ -161,10 +162,10 @@ function App() {
         </form>
       </section>
 
-      <section>
+      <section id='formSubmitted' className='form__submitted'>
         <FormSubmitted />
       </section>
-    </main >
+    </main>
   )
 }
 
