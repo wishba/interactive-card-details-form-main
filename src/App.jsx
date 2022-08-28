@@ -40,12 +40,15 @@ function App() {
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorName').innerHTML = `Can't be blank`;
+                document.getElementById('errorName').classList.add('form__message-error');
               } else {
-                document.getElementById('errorName').innerHTML = `Correct format`;
+                document.getElementById('errorName').innerHTML = 'Correct format';
+                document.getElementById('errorName').classList.remove('form__message-error');
               }
             }}
           />
-          <p className='form__error' id='errorName'>error message</p>
+          {/* <p className='form__message form__message-error' id='errorName'>error message</p> */}
+          <p className='form__message' id='errorName'>error message</p>
 
           <label>CARD NUMBER</label>
           <input type='text'
@@ -75,7 +78,7 @@ function App() {
               }
             }}
           />
-          <p className='form__error' id="errorNumber">error message</p>
+          <p className='form__message' id="errorNumber">error message</p>
 
           <label>EXP. DATE (MM/YY)</label>
           <input type="text"
@@ -96,6 +99,8 @@ function App() {
               }
             }}
           />
+          <p className='form__message' id="errorMM">error message</p>
+
           <input type="text"
             placeholder="YY"
             required
@@ -115,8 +120,7 @@ function App() {
               }
             }}
           />
-          <p className='form__error' id="errorMM">error message</p>
-          <p className='form__error' id="errorYY">error message</p>
+          <p className='form__message' id="errorYY">error message</p>
 
           <label>CVC</label>
           <input type="text"
@@ -137,7 +141,7 @@ function App() {
               }
             }}
           />
-          <p className='form__error' id="errorCVC">error message</p>
+          <p className='form__message' id="errorCVC">error message</p>
 
           <button type="submit">Confirm</button>
         </form>

@@ -16,6 +16,10 @@ input {
   font: inherit;
 }
 
-.form__error {
+.form__message {
   visibility: hidden;
+}
+
+.form__message.form__message-error {
+  visibility: visible;
 }
