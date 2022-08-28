@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import CardBack from './CardBack';
 import CardFront from './CardFront';
-import FormSubmitted from './FormSubmitted';
 
 function App() {
   const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
@@ -46,7 +45,7 @@ function App() {
               }
             }}
           />
-          <p id='errorName'>error message</p>
+          <p className='form__error' id='errorName'>error message</p>
 
           <label>CARD NUMBER</label>
           <input type='text'
@@ -76,7 +75,7 @@ function App() {
               }
             }}
           />
-          <p id="errorNumber">error message</p>
+          <p className='form__error' id="errorNumber">error message</p>
 
           <label>EXP. DATE (MM/YY)</label>
           <input type="text"
@@ -116,8 +115,8 @@ function App() {
               }
             }}
           />
-          <p id="errorMM">error message</p>
-          <p id="errorYY">error message</p>
+          <p className='form__error' id="errorMM">error message</p>
+          <p className='form__error' id="errorYY">error message</p>
 
           <label>CVC</label>
           <input type="text"
@@ -138,7 +137,7 @@ function App() {
               }
             }}
           />
-          <p id="errorCVC">error message</p>
+          <p className='form__error' id="errorCVC">error message</p>
 
           <button type="submit">Confirm</button>
         </form>

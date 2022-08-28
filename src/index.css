@@ -15,3 +15,7 @@ form>* {
 input {
   font: inherit;
 }
+
+.form__error {
+  visibility: hidden;
+}
