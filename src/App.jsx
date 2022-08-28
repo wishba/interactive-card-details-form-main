@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import CardBack from './CardBack';
 import CardFront from './CardFront';
+import FormSubmitted from './FormSubmitted';
 
 function App() {
   const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
@@ -8,6 +9,10 @@ function App() {
   const [cardM, setCardM] = useState('00');
   const [cardY, setCardY] = useState('00');
   const [cardCVC, setCardCVC] = useState('000');
+
+  /* const handleSubmit = (e) => {
+    e.preventDefault();
+  } */
 
   return (
     <main className="App">
@@ -24,6 +29,7 @@ function App() {
       </section>
 
       <section>
+        {/* <form onSubmit={handleSubmit}> */}
         <form onSubmit={(e) => { e.preventDefault(); }}>
           <label>CARDHOLDER NAME</label>
           <input type="text"
@@ -63,7 +69,7 @@ function App() {
 
               if (e.target.value === '') {
                 document.getElementById('errorNumber').innerHTML = `Can't be blank`;
-              } else if (e.target.value.includes(' ') || e.target.value === ' ' && isNaN(e.target.value)) {
+              } else if (e.target.value === ' ' && isNaN(e.target.value)) {
                 document.getElementById('errorNumber').innerHTML = `Wrong format, numbers only`;
               } else {
                 document.getElementById('errorNumber').innerHTML = `Correct format`;
@@ -143,7 +149,7 @@ function App() {
         <p>We've added your card details</p>
         <button>Continue</button>
       </section>
-    </main>
+    </main >
   )
 }
 
