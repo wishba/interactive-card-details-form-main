@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import CardBack from './CardBack';
 import CardFront from './CardFront';
+import FormSubmitted from './FormSubmitted';
 
 function App() {
   const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
@@ -161,9 +162,7 @@ function App() {
       </section>
 
       <section>
-        <h1>THANK YOU!</h1>
-        <p>We've added your card details</p>
-        <button>Continue</button>
+        <FormSubmitted />
       </section>
     </main >
   )
