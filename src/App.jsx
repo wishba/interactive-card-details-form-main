@@ -28,6 +28,7 @@ function App() {
       </section>
 
       <section>
+        {/* <form> */}
         {/* <form onSubmit={handleSubmit}> */}
         <form onSubmit={(e) => { e.preventDefault(); }}>
           <label>CARDHOLDER NAME</label>
@@ -47,7 +48,6 @@ function App() {
               }
             }}
           />
-          {/* <p className='form__message form__message-error' id='errorName'>error message</p> */}
           <p className='form__message' id='errorName'>error message</p>
 
           <label>CARD NUMBER</label>
@@ -71,10 +71,13 @@ function App() {
 
               if (e.target.value === '') {
                 document.getElementById('errorNumber').innerHTML = `Can't be blank`;
-              } else if (e.target.value === ' ' && isNaN(e.target.value)) {
-                document.getElementById('errorNumber').innerHTML = `Wrong format, numbers only`;
+                document.getElementById('errorNumber').classList.add('form__message-error');
+              } else if (e.target.value.match(/[^0-9\s]/)) {
+                document.getElementById('errorNumber').innerHTML = 'Wrong format, numbers only';
+                document.getElementById('errorNumber').classList.add('form__message-error');
               } else {
-                document.getElementById('errorNumber').innerHTML = `Correct format`;
+                document.getElementById('errorNumber').innerHTML = 'Correct format';
+                document.getElementById('errorNumber').classList.remove('form__message-error');
               }
             }}
           />
@@ -92,10 +95,13 @@ function App() {
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorMM').innerHTML = `Can't be blank`;
-              } else if (e.target.value.includes('[a-zA-Z]') || e.target.value.includes(' ') || isNaN(e.target.value)) {
-                document.getElementById('errorMM').innerHTML = `Wrong format, numbers only`;
+                document.getElementById('errorMM').classList.add('form__message-error');
+              } else if (e.target.value.match(/\D/)) {
+                document.getElementById('errorMM').innerHTML = 'Wrong format, numbers only';
+                document.getElementById('errorMM').classList.add('form__message-error');
               } else {
-                document.getElementById('errorMM').innerHTML = `Correct format`;
+                document.getElementById('errorMM').innerHTML = 'Correct format';
+                document.getElementById('errorMM').classList.remove('form__message-error');
               }
             }}
           />
@@ -113,10 +119,13 @@ function App() {
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorYY').innerHTML = `Can't be blank`;
-              } else if (e.target.value.includes('[a-zA-Z]') || e.target.value.includes(' ') || isNaN(e.target.value)) {
-                document.getElementById('errorYY').innerHTML = `Wrong format, numbers only`;
+                document.getElementById('errorYY').classList.add('form__message-error');
+              } else if (e.target.value.match(/\D/)) {
+                document.getElementById('errorYY').innerHTML = 'Wrong format, numbers only';
+                document.getElementById('errorYY').classList.add('form__message-error');
               } else {
-                document.getElementById('errorYY').innerHTML = `Correct format`;
+                document.getElementById('errorYY').innerHTML = 'Correct format';
+                document.getElementById('errorYY').classList.remove('form__message-error');
               }
             }}
           />
@@ -134,10 +143,13 @@ function App() {
             onBlur={(e) => {
               if (e.target.value === '') {
                 document.getElementById('errorCVC').innerHTML = `Can't be blank`;
-              } else if (e.target.value.includes('[a-zA-Z]') || e.target.value.includes(' ') || isNaN(e.target.value)) {
-                document.getElementById('errorCVC').innerHTML = `Wrong format, numbers only`;
+                document.getElementById('errorCVC').classList.add('form__message-error');
+              } else if (e.target.value.match(/\D/)) {
+                document.getElementById('errorCVC').innerHTML = 'Wrong format, numbers only';
+                document.getElementById('errorCVC').classList.add('form__message-error');
               } else {
-                document.getElementById('errorCVC').innerHTML = `Correct format`;
+                document.getElementById('errorCVC').innerHTML = 'Correct format';
+                document.getElementById('errorCVC').classList.remove('form__message-error');
               }
             }}
           />
