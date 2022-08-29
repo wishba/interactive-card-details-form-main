@@ -36,7 +36,7 @@ function App() {
         {/* <form onSubmit={(e) => { e.preventDefault(); }}> */}
         <form onSubmit={handleSubmit}>
           <label>CARDHOLDER NAME</label>
-          <div className="form__input">
+          <div className="form__input" id='inputName'>
             <input type="text"
               placeholder="e.g. Jane Appleseed"
               required
@@ -47,9 +47,11 @@ function App() {
                 if (e.target.value === '') {
                   document.getElementById('errorName').innerHTML = `Can't be blank`;
                   document.getElementById('errorName').classList.add('form__message-error');
+                  document.getElementById('inputName').classList.add('form__input-error');
                 } else {
                   document.getElementById('errorName').innerHTML = 'Correct format';
                   document.getElementById('errorName').classList.remove('form__message-error');
+                  document.getElementById('inputName').classList.remove('form__input-error');
                 }
               }}
             />
@@ -57,7 +59,7 @@ function App() {
           <p className='form__message' id='errorName'>error message</p>
 
           <label>CARD NUMBER</label>
-          <div className="form__input">
+          <div className="form__input" id='inputNumber'>
             <input type='text'
               placeholder="e.g. 1234 5678 9123 0000"
               required
@@ -79,12 +81,15 @@ function App() {
                 if (e.target.value === '') {
                   document.getElementById('errorNumber').innerHTML = `Can't be blank`;
                   document.getElementById('errorNumber').classList.add('form__message-error');
+                  document.getElementById('inputNumber').classList.add('form__input-error');
                 } else if (e.target.value.match(/[^0-9\s]/)) {
                   document.getElementById('errorNumber').innerHTML = 'Wrong format, numbers only';
                   document.getElementById('errorNumber').classList.add('form__message-error');
+                  document.getElementById('inputNumber').classList.add('form__input-error');
                 } else {
                   document.getElementById('errorNumber').innerHTML = 'Correct format';
                   document.getElementById('errorNumber').classList.remove('form__message-error');
+                  document.getElementById('inputNumber').classList.remove('form__input-error');
                 }
               }}
             />
@@ -94,7 +99,7 @@ function App() {
           <label>EXP. DATE (MM/YY)</label>
           <label>CVC</label>
 
-          <div className="form__input">
+          <div className="form__input" id='inputMM'>
             <input type="text"
               placeholder="MM"
               required
@@ -106,18 +111,21 @@ function App() {
               onBlur={(e) => {
                 if (e.target.value === '') {
                   document.getElementById('errorMM').innerHTML = `Can't be blank`;
-                  document.getElementById('errorMM').classList.add('form__message-error');
+                  document.getElementById('inputMM').classList.add('form__message-error');
+                  document.getElementById('inputMM').classList.add('form__input-error');
                 } else if (e.target.value.match(/\D/)) {
                   document.getElementById('errorMM').innerHTML = 'Wrong format, numbers only';
                   document.getElementById('errorMM').classList.add('form__message-error');
+                  document.getElementById('inputMM').classList.add('form__input-error');
                 } else {
                   document.getElementById('errorMM').innerHTML = 'Correct format';
                   document.getElementById('errorMM').classList.remove('form__message-error');
+                  document.getElementById('inputMM').classList.remove('form__input-error');
                 }
               }}
             />
           </div>
-          <div className="form__input">
+          <div className="form__input" id='inputYY'>
             <input type="text"
               placeholder="YY"
               required
@@ -131,17 +139,20 @@ function App() {
                 if (e.target.value === '') {
                   document.getElementById('errorYY').innerHTML = `Can't be blank`;
                   document.getElementById('errorYY').classList.add('form__message-error');
+                  document.getElementById('inputYY').classList.add('form__input-error');
                 } else if (e.target.value.match(/\D/)) {
                   document.getElementById('errorYY').innerHTML = 'Wrong format, numbers only';
                   document.getElementById('errorYY').classList.add('form__message-error');
+                  document.getElementById('inputYY').classList.add('form__input-error');
                 } else {
                   document.getElementById('errorYY').innerHTML = 'Correct format';
                   document.getElementById('errorYY').classList.remove('form__message-error');
+                  document.getElementById('inputYY').classList.remove('form__input-error');
                 }
               }}
             />
           </div>
-          <div className="form__input">
+          <div className="form__input" id='inputCVC'>
             <input type="text"
               placeholder="e.g. 123"
               required
@@ -154,12 +165,15 @@ function App() {
                 if (e.target.value === '') {
                   document.getElementById('errorCVC').innerHTML = `Can't be blank`;
                   document.getElementById('errorCVC').classList.add('form__message-error');
+                  document.getElementById('inputCVC').classList.add('form__input-error');
                 } else if (e.target.value.match(/\D/)) {
                   document.getElementById('errorCVC').innerHTML = 'Wrong format, numbers only';
                   document.getElementById('errorCVC').classList.add('form__message-error');
+                  document.getElementById('inputCVC').classList.add('form__input-error');
                 } else {
                   document.getElementById('errorCVC').innerHTML = 'Correct format';
                   document.getElementById('errorCVC').classList.remove('form__message-error');
+                  document.getElementById('inputCVC').classList.remove('form__input-error');
                 }
               }}
             />
