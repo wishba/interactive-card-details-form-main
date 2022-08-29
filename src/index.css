@@ -94,7 +94,8 @@ body {
 }
 
 .form {
-  margin-top: 4em;
+  margin-top: 3em;
+  padding: 1em;
 }
 
 form>* {
@@ -131,6 +132,7 @@ form>* {
 input {
   border: none;
   color: var(--clr-inputtxt);
+  width: 100%;
 }
 
 input:focus {
