@@ -2,8 +2,12 @@
 
 :root {
   --clr-cardtxt: hsl(0, 0%, 100%);
+
   --clr-gradientl: hsl(249, 99%, 64%);
   --clr-gradientr: hsl(278, 94%, 30%);
+
+  --clr-inputbdr: hsl(270, 3%, 87%);
+  --clr-inputtxt: hsl(279, 6%, 55%);
 }
 
 html {
@@ -96,7 +100,7 @@ form>* {
 }
 
 .form__message {
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .form__message.form__message-error {
@@ -105,4 +109,22 @@ form>* {
 
 .form__submitted {
   display: none;
+}
+
+.form__input {
+  background-color: var(--clr-inputbdr);
+  padding: 2px;
+}
+
+.form__input:focus-within {
+  background-image: linear-gradient(to right, var(--clr-gradientl), var(--clr-gradientr));
+}
+
+input {
+  border: none;
+  color: var(--clr-inputtxt);
+}
+
+input:focus {
+  outline: none;
 }
