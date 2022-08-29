@@ -105,6 +105,7 @@ form>* {
 .form__message {
   /* visibility: hidden; */
   color: var(--clr-inputerr);
+  margin: 0;
 }
 
 .form__message.form__message-error {
@@ -117,7 +118,8 @@ form>* {
 
 .form__input {
   background-color: var(--clr-inputbdr);
-  padding: 2px;
+  /* padding: 2px; */
+  padding: 2px 3px 3px;
 }
 
 .form__input.form__input-error {
