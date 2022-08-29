@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
+:root {
+  --clr-cardtxt: hsl(0, 0%, 100%);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -37,6 +41,7 @@ body {
 .card__cvc {
   margin-top: 4.3em;
   margin-left: 14.5em;
+  color: var(--clr-cardtxt);
 }
 
 .card__front {
@@ -63,6 +68,11 @@ body {
 
 .card__number {
   font-size: 18px;
+  color: var(--clr-cardtxt);
+}
+
+.card__name {
+  color: var(--clr-cardtxt);
 }
 
 .card__date {
