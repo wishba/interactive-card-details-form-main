@@ -31,7 +31,7 @@ function App() {
         <div className='card'></div>
       </section>
 
-      <section id='form'>
+      <section className='form' id='form'>
         {/* <form> */}
         {/* <form onSubmit={(e) => { e.preventDefault(); }}> */}
         <form onSubmit={handleSubmit}>

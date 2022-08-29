@@ -79,6 +79,10 @@ body {
   padding-left: 3em;
 }
 
+.form {
+  margin-top: 5em;
+}
+
 form>* {
   display: block;
 }
@@ -88,7 +92,7 @@ input {
 }
 
 .form__message {
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .form__message.form__message-error {
