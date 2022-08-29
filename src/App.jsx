@@ -28,6 +28,7 @@ function App() {
         <CardBack
           cardCVC={cardCVC}
         />
+        <div className='card'></div>
       </section>
 
       <section id='form'>
