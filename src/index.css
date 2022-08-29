@@ -19,27 +19,10 @@ body {
   z-index: 0;
 }
 
-.card__front {
-  background-image:
-    url(images/card-logo.svg),
-    url(images/bg-card-front.png);
-  background-repeat: no-repeat;
-  background-size: 3.5em, 18em;
-  background-position: left 2em top 1em, center;
-  width: 20em;
-  height: 10em;
-
-  margin-left: 50%;
-  transform: translateX(-57.5%);
-  position: absolute;
-  z-index: 2;
-  top: 7.5em;
-}
-
 .card__back {
   background-image: url(images/bg-card-back.png);
   background-repeat: no-repeat;
-  background-size: 18em;
+  background-size: 17em;
   background-position: center;
   width: 20em;
   height: 10em;
@@ -49,6 +32,41 @@ body {
   position: absolute;
   z-index: 1;
   top: 2em;
+}
+
+.card__cvc {
+  margin-top: 4.3em;
+  margin-left: 14.5em;
+}
+
+.card__front {
+  background-image:
+    url(images/card-logo.svg),
+    url(images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: 3.5em, 17em;
+  background-position: left 2.5em top 1.5em, center;
+  width: 20em;
+  height: 10em;
+
+  margin-left: 50%;
+  transform: translateX(-57.5%);
+  position: absolute;
+  z-index: 2;
+  top: 7.3em;
+}
+
+.card__front-contain {
+  margin-top: 5em;
+  margin-left: 2.5em;
+}
+
+.card__number {
+  font-size: 18px;
+}
+
+.card__date {
+  padding-left: 3em;
 }
 
 form>* {
