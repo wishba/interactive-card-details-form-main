@@ -97,8 +97,6 @@ function App() {
           <p className='form__message' id="errorNumber">error message</p>
 
           <label>EXP. DATE (MM/YY)</label>
-          <label>CVC</label>
-
           <div className="form__input" id='inputMM'>
             <input type="text"
               placeholder="MM"
@@ -125,6 +123,7 @@ function App() {
               }}
             />
           </div>
+          <p className='form__message' id="errorMM">error message</p>
           <div className="form__input" id='inputYY'>
             <input type="text"
               placeholder="YY"
@@ -152,6 +151,9 @@ function App() {
               }}
             />
           </div>
+          <p className='form__message' id="errorYY">error message</p>
+
+          <label>CVC</label>
           <div className="form__input" id='inputCVC'>
             <input type="text"
               placeholder="e.g. 123"
@@ -178,9 +180,6 @@ function App() {
               }}
             />
           </div>
-
-          <p className='form__message' id="errorMM">error message</p>
-          <p className='form__message' id="errorYY">error message</p>
           <p className='form__message' id="errorCVC">error message</p>
 
           <button type="submit">Confirm</button>
