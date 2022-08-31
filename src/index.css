@@ -71,7 +71,7 @@ body {
 
 .card__cvc {
   margin-top: 2.425em;
-  margin-left: 10.8em;
+  margin-left: 10em;
 }
 
 .card__front-container {
@@ -175,5 +175,26 @@ button {
     width: 30%;
     height: 100vh;
     background-image: url(images/bg-main-desktop.png);
+  }
+
+  .card>* {
+    width: 30em;
+    height: 16.5em;
+  }
+
+  .card__back {
+    background-size: 30em;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: translateX(0);
+  }
+
+  .card__front {
+    background-size: 6em, 30em;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: translateX(0);
   }
 }
