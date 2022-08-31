@@ -172,7 +172,8 @@ button {
   }
 
   .card {
-    width: 30%;
+    /* width: 30%; */
+    width: 30em;
     height: 100vh;
     background-image: url(images/bg-main-desktop.png);
   }
@@ -184,18 +185,18 @@ button {
 
   .card__back {
     background-size: 30em;
-    position: static;
-    top: auto;
+    position: absolute;
+    top: 52%;
     left: auto;
     transform: translateX(0);
   }
 
   .card__front {
     background-size: 6em, 30em;
-    position: static;
-    top: auto;
+    position: absolute;
+    top: 48%;
     left: auto;
-    transform: translateX(0);
+    transform: translateY(-100%);
   }
 
   .card__cvc {
@@ -219,5 +220,11 @@ button {
   .card__date {
     font-size: 1.5em;
     margin: .5em 0;
+  }
+
+  .form,
+  .form__submitted {
+    margin: 25vh auto;
+    width: 30%;
   }
 }
