@@ -70,8 +70,9 @@ body {
 }
 
 .card__cvc {
-  margin-top: 2.425em;
-  margin-left: 10em;
+  font-size: 10px;
+  margin-top: 4.5em;
+  margin-left: 17.5em;
 }
 
 .card__front-container {
@@ -85,11 +86,13 @@ body {
 }
 
 .card__name {
-  width: 10em;
+  font-size: 10px;
+  width: 17.5em;
   margin: 0;
 }
 
 .card__date {
+  font-size: 10px;
   margin: 0;
 }
 
@@ -181,6 +184,7 @@ button {
   .card>* {
     width: 30em;
     height: 16.5em;
+    padding: 2em;
   }
 
   .card__back {
@@ -195,6 +199,7 @@ button {
   }
 
   .card__front {
+    background-position: top 2em left 2em, center;
     background-size: 6em, 30em;
     position: relative;
     top: 19vh;
@@ -205,9 +210,9 @@ button {
   }
 
   .card__cvc {
-    font-size: 1.5em;
-    margin-top: 4.1em;
-    margin-left: 15em;
+    font-size: 20px;
+    margin-top: 4.3em;
+    margin-left: 17.5em;
   }
 
   .card__number {
@@ -217,13 +222,13 @@ button {
   }
 
   .card__name {
-    font-size: 1.5em;
-    width: 14em;
+    font-size: 20px;
+    width: 17em;
     margin: .5em 0;
   }
 
   .card__date {
-    font-size: 1.5em;
+    font-size: 20px;
     margin: .5em 0;
   }
 
