@@ -28,8 +28,12 @@ body {
   padding: 0;
 }
 
+.form {
+  margin: 1em;
+}
+
 .form__message {
-  visibility: hidden;
+  /* visibility: hidden; */
   color: var(--clr-inputerr);
   margin-top: 0;
 }
@@ -66,4 +70,20 @@ input {
 
 input:focus {
   outline: none;
+}
+
+.form__flex {
+  display: flex;
+  width: 100%;
+}
+
+.form__flex-date {
+  display: flex;
+  width: 15em;
+  gap: .5em;
+}
+
+.form__flex-cvc {
+  width: 100%;
+  margin-left: 1em;
 }

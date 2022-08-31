@@ -96,90 +96,96 @@ function App() {
           <p className='form__message' id="errorNumber">error message</p>
 
           <label>EXP. DATE (MM/YY)</label>
-          <div className="form__input" id='inputMM'>
-            <input type="text"
-              placeholder="MM"
-              required
-              maxLength={2}
-              pattern="[0-9]{2}"
+          <div className="form__flex">
+            <div className="form__flex-date">
+              <div className="form__input" id='inputMM'>
+                <input type="text"
+                  placeholder="MM"
+                  required
+                  maxLength={2}
+                  pattern="[0-9]{2}"
 
-              onChange={(e) => { setCardM(e.target.value); }}
+                  onChange={(e) => { setCardM(e.target.value); }}
 
-              onBlur={(e) => {
-                if (e.target.value === '') {
-                  document.getElementById('errorMM').innerHTML = `Can't be blank`;
-                  document.getElementById('inputMM').classList.add('form__message-error');
-                  document.getElementById('inputMM').classList.add('form__input-error');
-                } else if (e.target.value.match(/\D/)) {
-                  document.getElementById('errorMM').innerHTML = 'Wrong format, numbers only';
-                  document.getElementById('errorMM').classList.add('form__message-error');
-                  document.getElementById('inputMM').classList.add('form__input-error');
-                } else {
-                  document.getElementById('errorMM').innerHTML = 'Correct format';
-                  document.getElementById('errorMM').classList.remove('form__message-error');
-                  document.getElementById('inputMM').classList.remove('form__input-error');
-                }
-              }}
-            />
+                  onBlur={(e) => {
+                    if (e.target.value === '') {
+                      document.getElementById('errorMM').innerHTML = `Can't be blank`;
+                      document.getElementById('inputMM').classList.add('form__message-error');
+                      document.getElementById('inputMM').classList.add('form__input-error');
+                    } else if (e.target.value.match(/\D/)) {
+                      document.getElementById('errorMM').innerHTML = 'Wrong format, numbers only';
+                      document.getElementById('errorMM').classList.add('form__message-error');
+                      document.getElementById('inputMM').classList.add('form__input-error');
+                    } else {
+                      document.getElementById('errorMM').innerHTML = 'Correct format';
+                      document.getElementById('errorMM').classList.remove('form__message-error');
+                      document.getElementById('inputMM').classList.remove('form__input-error');
+                    }
+                  }}
+                />
+              </div>
+              {/* <p className='form__message' id="errorMM">error message</p> */}
+              <div className="form__input" id='inputYY'>
+                <input type="text"
+                  placeholder="YY"
+                  required
+                  maxLength={2}
+                  pattern="[0-9]{2}"
+                  title='3 number'
+
+                  onChange={(e) => { setCardY(e.target.value); }}
+
+                  onBlur={(e) => {
+                    if (e.target.value === '') {
+                      document.getElementById('errorYY').innerHTML = `Can't be blank`;
+                      document.getElementById('errorYY').classList.add('form__message-error');
+                      document.getElementById('inputYY').classList.add('form__input-error');
+                    } else if (e.target.value.match(/\D/)) {
+                      document.getElementById('errorYY').innerHTML = 'Wrong format, numbers only';
+                      document.getElementById('errorYY').classList.add('form__message-error');
+                      document.getElementById('inputYY').classList.add('form__input-error');
+                    } else {
+                      document.getElementById('errorYY').innerHTML = 'Correct format';
+                      document.getElementById('errorYY').classList.remove('form__message-error');
+                      document.getElementById('inputYY').classList.remove('form__input-error');
+                    }
+                  }}
+                />
+              </div>
+              {/* <p className='form__message' id="errorYY">error message</p> */}
+            </div>
+
+            <div className="form__flex-cvc">
+              {/* <label>CVC</label> */}
+              <div className="form__input" id='inputCVC'>
+                <input type="text"
+                  placeholder="e.g. 123"
+                  required
+                  maxLength={3}
+                  pattern="[0-9]{3}"
+
+                  onChange={(e) => { setCardCVC(e.target.value); }}
+
+                  onBlur={(e) => {
+                    if (e.target.value === '') {
+                      document.getElementById('errorCVC').innerHTML = `Can't be blank`;
+                      document.getElementById('errorCVC').classList.add('form__message-error');
+                      document.getElementById('inputCVC').classList.add('form__input-error');
+                    } else if (e.target.value.match(/\D/)) {
+                      document.getElementById('errorCVC').innerHTML = 'Wrong format, numbers only';
+                      document.getElementById('errorCVC').classList.add('form__message-error');
+                      document.getElementById('inputCVC').classList.add('form__input-error');
+                    } else {
+                      document.getElementById('errorCVC').innerHTML = 'Correct format';
+                      document.getElementById('errorCVC').classList.remove('form__message-error');
+                      document.getElementById('inputCVC').classList.remove('form__input-error');
+                    }
+                  }}
+                />
+              </div>
+              {/* <p className='form__message' id="errorCVC">error message</p> */}
+            </div>
           </div>
-          <p className='form__message' id="errorMM">error message</p>
-          <div className="form__input" id='inputYY'>
-            <input type="text"
-              placeholder="YY"
-              required
-              maxLength={2}
-              pattern="[0-9]{2}"
-              title='3 number'
-
-              onChange={(e) => { setCardY(e.target.value); }}
-
-              onBlur={(e) => {
-                if (e.target.value === '') {
-                  document.getElementById('errorYY').innerHTML = `Can't be blank`;
-                  document.getElementById('errorYY').classList.add('form__message-error');
-                  document.getElementById('inputYY').classList.add('form__input-error');
-                } else if (e.target.value.match(/\D/)) {
-                  document.getElementById('errorYY').innerHTML = 'Wrong format, numbers only';
-                  document.getElementById('errorYY').classList.add('form__message-error');
-                  document.getElementById('inputYY').classList.add('form__input-error');
-                } else {
-                  document.getElementById('errorYY').innerHTML = 'Correct format';
-                  document.getElementById('errorYY').classList.remove('form__message-error');
-                  document.getElementById('inputYY').classList.remove('form__input-error');
-                }
-              }}
-            />
-          </div>
-          <p className='form__message' id="errorYY">error message</p>
-
-          <label>CVC</label>
-          <div className="form__input" id='inputCVC'>
-            <input type="text"
-              placeholder="e.g. 123"
-              required
-              maxLength={3}
-              pattern="[0-9]{3}"
-
-              onChange={(e) => { setCardCVC(e.target.value); }}
-
-              onBlur={(e) => {
-                if (e.target.value === '') {
-                  document.getElementById('errorCVC').innerHTML = `Can't be blank`;
-                  document.getElementById('errorCVC').classList.add('form__message-error');
-                  document.getElementById('inputCVC').classList.add('form__input-error');
-                } else if (e.target.value.match(/\D/)) {
-                  document.getElementById('errorCVC').innerHTML = 'Wrong format, numbers only';
-                  document.getElementById('errorCVC').classList.add('form__message-error');
-                  document.getElementById('inputCVC').classList.add('form__input-error');
-                } else {
-                  document.getElementById('errorCVC').innerHTML = 'Correct format';
-                  document.getElementById('errorCVC').classList.remove('form__message-error');
-                  document.getElementById('inputCVC').classList.remove('form__input-error');
-                }
-              }}
-            />
-          </div>
-          <p className='form__message' id="errorCVC">error message</p>
 
           <button type="submit">Confirm</button>
         </form>
