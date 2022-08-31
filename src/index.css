@@ -52,8 +52,8 @@ body {
   position: absolute;
   z-index: 0;
   top: 1.5em;
-  left: 50%;
-  transform: translateX(-40%);
+  right: 50%;
+  transform: translateX(60%);
 }
 
 .card__front {
@@ -65,8 +65,8 @@ body {
   position: absolute;
   z-index: 1;
   top: 6.2em;
-  left: 50%;
-  transform: translateX(-60%);
+  right: 50%;
+  transform: translateX(40%);
 }
 
 .card__cvc {
@@ -166,14 +166,14 @@ button {
   border-radius: 10px;
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:900px) {
   .App {
     display: flex;
   }
 
   .card {
-    /* width: 30%; */
-    width: 30em;
+    width: 30%;
+    /* width: 30em; */
     height: 100vh;
     background-image: url(images/bg-main-desktop.png);
   }
@@ -185,18 +185,23 @@ button {
 
   .card__back {
     background-size: 30em;
-    position: absolute;
-    top: 52%;
-    left: auto;
+    position: relative;
+    top: 22vh;
+    /* top: auto; */
+    right: auto;
     transform: translateX(0);
+    margin-left: 40%;
+    /* margin-left: 30%; */
   }
 
   .card__front {
     background-size: 6em, 30em;
-    position: absolute;
-    top: 48%;
-    left: auto;
-    transform: translateY(-100%);
+    position: relative;
+    top: 19vh;
+    /* top: auto; */
+    right: auto;
+    transform: translateX(0);
+    margin-left: 20%;
   }
 
   .card__cvc {
@@ -224,7 +229,10 @@ button {
 
   .form,
   .form__submitted {
-    margin: 25vh auto;
+    margin-top: 30vh;
+    margin-left: 21em;
+    /* margin-left: 15em; */
+    /* margin: 25vh auto; */
     width: 30%;
   }
 }
