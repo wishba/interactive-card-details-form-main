@@ -10,6 +10,8 @@
 
   --clr-gradientl: hsl(249, 99%, 64%);
   --clr-gradientr: hsl(278, 94%, 30%);
+
+  --clr-button: hsl(278, 68%, 11%);
 }
 
 html {
@@ -69,7 +71,7 @@ body {
 
 .card__cvc {
   margin-top: 2.425em;
-  margin-left: 10em;
+  margin-left: 10.8em;
 }
 
 .card__front-container {
@@ -91,7 +93,8 @@ body {
   margin: 0;
 }
 
-.form {
+.form,
+.form__submitted {
   margin: 6.5em 1em;
 }
 
@@ -149,4 +152,13 @@ input:focus {
 .form__flex-right {
   width: 100%;
   margin-left: 1em;
+}
+
+button {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  background-color: var(--clr-button);
+  color: var(--clr-cardtxt);
+  font: inherit;
 }
