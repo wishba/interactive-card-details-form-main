@@ -199,8 +199,25 @@ button {
   }
 
   .card__cvc {
+    font-size: 1.5em;
     margin-top: 4.1em;
     margin-left: 15em;
+  }
+
+  .card__number {
+    font-size: 2.2em;
+    margin: 0;
+    padding-top: 3.5em;
+  }
+
+  .card__name {
     font-size: 1.5em;
+    width: 14em;
+    margin: .5em 0;
+  }
+
+  .card__date {
+    font-size: 1.5em;
+    margin: .5em 0;
   }
 }
