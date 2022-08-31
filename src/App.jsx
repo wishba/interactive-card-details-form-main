@@ -31,8 +31,6 @@ function App() {
       </section>
 
       <section className='form' id='form'>
-        {/* <form> */}
-        {/* <form onSubmit={(e) => { e.preventDefault(); }}> */}
         <form onSubmit={handleSubmit}>
           <label>CARDHOLDER NAME</label>
           <div className="form__input" id='inputName'>
@@ -89,7 +87,6 @@ function App() {
                   document.getElementById('inputNumber').classList.add('form__input-error');
                 }
 
-                // if (e.target.value.match(/\d/)) {
                 if (e.target.value.match(/\d{4}\s\d{4}\s\d{4}\s\d{4}/)) {
                   document.getElementById('errorNumber').innerHTML = 'Correct format';
                   document.getElementById('errorNumber').classList.remove('form__message-error');

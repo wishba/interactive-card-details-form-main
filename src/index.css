@@ -28,6 +28,13 @@ body {
   padding: 0;
 }
 
+.card {
+  background-image: url(images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20em;
+}
+
 .card>* {
   color: var(--clr-cardtxt);
   width: 15em;
