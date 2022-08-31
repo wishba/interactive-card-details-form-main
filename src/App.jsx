@@ -95,9 +95,17 @@ function App() {
           </div>
           <p className='form__message' id="errorNumber">error message</p>
 
-          <label>EXP. DATE (MM/YY)</label>
           <div className="form__flex">
-            <div className="form__flex-date">
+            <div className="form__flex-left">
+              <label>EXP. DATE (MM/YY)</label>
+            </div>
+            <div className="form__flex-right">
+              <label>CVC</label>
+            </div>
+          </div>
+
+          <div className="form__flex">
+            <div className="form__flex-left">
               <div className="form__input" id='inputMM'>
                 <input type="text"
                   placeholder="MM"
@@ -155,8 +163,7 @@ function App() {
               {/* <p className='form__message' id="errorYY">error message</p> */}
             </div>
 
-            <div className="form__flex-cvc">
-              {/* <label>CVC</label> */}
+            <div className="form__flex-right">
               <div className="form__input" id='inputCVC'>
                 <input type="text"
                   placeholder="e.g. 123"

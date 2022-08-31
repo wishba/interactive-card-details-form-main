@@ -77,13 +77,13 @@ input:focus {
   width: 100%;
 }
 
-.form__flex-date {
+.form__flex-left {
   display: flex;
-  width: 15em;
+  width: 20em;
   gap: .5em;
 }
 
-.form__flex-cvc {
+.form__flex-right {
   width: 100%;
   margin-left: 1em;
 }
