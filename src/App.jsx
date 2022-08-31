@@ -120,20 +120,18 @@ function App() {
                       document.getElementById('errorDate').innerHTML = `Can't be blank`;
                       document.getElementById('errorDate').classList.add('form__message-error');
                       document.getElementById('inputMM').classList.add('form__input-error');
-                    } else if (e.target.value.match(/\D/)) {
+                    }
+
+                    if (e.target.value.match(/\D/)) {
                       document.getElementById('errorDate').innerHTML = 'Wrong format, numbers only';
                       document.getElementById('errorDate').classList.add('form__message-error');
                       document.getElementById('inputMM').classList.add('form__input-error');
-                    } else {
+                    }
+
+                    if (e.target.value.match(/\d/) && document.getElementById('inputYY').classList == ('form__input-error')) {
                       document.getElementById('errorDate').innerHTML = 'Correct format';
                       document.getElementById('errorDate').classList.remove('form__message-error');
                       document.getElementById('inputMM').classList.remove('form__input-error');
-                    }
-
-                    if (document.getElementById('inputYY').classList == 'form__input-error') {
-                      // document.getElementById('errorDate').classList.add('form__message-error');
-                    } else {
-                      // document.getElementById('errorDate').classList.remove('form__message-error');
                     }
                   }}
                 />
@@ -153,24 +151,27 @@ function App() {
                       document.getElementById('errorDate').innerHTML = `Can't be blank`;
                       document.getElementById('errorDate').classList.add('form__message-error');
                       document.getElementById('inputYY').classList.add('form__input-error');
-                    } else if (e.target.value.match(/\D/)) {
+                    }
+
+                    if (e.target.value.match(/\D/)) {
                       document.getElementById('errorDate').innerHTML = 'Wrong format, numbers only';
                       document.getElementById('errorDate').classList.add('form__message-error');
                       document.getElementById('inputYY').classList.add('form__input-error');
-                    } else {
+                    }
+
+                    if (e.target.value.match(/\d/) && document.getElementById('inputMM').classList == ('form__input-error')) {
                       document.getElementById('errorDate').innerHTML = 'Correct format';
                       document.getElementById('errorDate').classList.remove('form__message-error');
                       document.getElementById('inputYY').classList.remove('form__input-error');
-                    }
-                    if (document.getElementById('inputMM').classList == 'form__input-error') {
-                      // document.getElementById('errorDate').classList.add('form__message-error');
-                    } else {
-                      // document.getElementById('errorDate').classList.remove('form__message-error');
                     }
                   }}
                 />
               </div>
             </div>
+
+            {/* kosong bener = kosong */}
+            {/* non    bener = non */}
+            {/* bener  bener = boner */}
 
             <div className="form__flex-right">
               <div className="form__input" id='inputCVC'>
