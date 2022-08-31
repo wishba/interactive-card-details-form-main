@@ -28,6 +28,10 @@ body {
   padding: 0;
 }
 
+.card__number {
+  font-size: 18px;
+}
+
 .form {
   margin: 1em;
 }
