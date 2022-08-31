@@ -169,6 +169,25 @@ button {
   border-radius: 10px;
 }
 
+.form__submitted {
+  background-image: url(images/icon-complete.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 6em;
+  text-align: center;
+}
+
+.form__submitted-head {
+  color: var(--clr-button);
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.form__submitted-body {
+  color: var(--clr-inputtxt);
+  margin-bottom: 3em;
+}
+
 @media screen and (min-width:900px) {
   .App {
     display: flex;
