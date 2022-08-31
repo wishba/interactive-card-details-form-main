@@ -118,7 +118,7 @@ function App() {
                   onBlur={(e) => {
                     if (e.target.value === '') {
                       document.getElementById('errorMM').innerHTML = `Can't be blank`;
-                      document.getElementById('inputMM').classList.add('form__message-error');
+                      document.getElementById('errorMM').classList.add('form__message-error');
                       document.getElementById('inputMM').classList.add('form__input-error');
                     } else if (e.target.value.match(/\D/)) {
                       document.getElementById('errorMM').innerHTML = 'Wrong format, numbers only';
@@ -198,7 +198,6 @@ function App() {
             </div>
             <div className="form__flex-right">
               <p className='form__message' id="errorCVC">error message</p>
-
             </div>
           </div>
           <button type="submit">Confirm</button>

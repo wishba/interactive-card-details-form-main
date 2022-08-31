@@ -33,7 +33,7 @@ body {
 }
 
 .form__message {
-  /* visibility: hidden; */
+  visibility: hidden;
   color: var(--clr-inputerr);
   margin-top: 0;
 }
