@@ -8,7 +8,7 @@ export default function CardFront(props) {
         <p className='card__name'>
           {props.cardName ? props.cardName : 'JANE APPLESEED'}
         </p>
-        <p>
+        <p className='card__date'>
           {props.cardM ? props.cardM : '00'}
           /
           {props.cardY ? props.cardY : '00'}

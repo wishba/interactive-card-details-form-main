@@ -18,7 +18,7 @@ function App() {
 
   return (
     <main className="App">
-      <section>
+      <section className='card'>
         <CardFront
           cardNumber={cardNumber}
           cardName={cardName}

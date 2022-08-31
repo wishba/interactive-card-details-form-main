@@ -28,8 +28,21 @@ body {
   padding: 0;
 }
 
+.card {
+  color: var(--clr-cardtxt);
+}
+
 .card__front {
   width: 15em;
+  height: 8.25em;
+  /* background-color: red; */
+  background-image:
+    url(images/card-logo.svg),
+    url(images/bg-card-front.png);
+  background-size: 3em, 15em;
+  background-repeat: no-repeat;
+  background-position: top 1em left 1em, center;
+  padding: 1em;
 }
 
 .card__front-container {
@@ -38,10 +51,17 @@ body {
 
 .card__number {
   font-size: 18px;
+  margin: 0;
+  padding-top: 3em;
 }
 
 .card__name {
   width: 10em;
+  margin: 0;
+}
+
+.card__date {
+  margin: 0;
 }
 
 .form {
