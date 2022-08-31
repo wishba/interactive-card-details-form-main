@@ -30,8 +30,8 @@ function App() {
         />
       </section>
 
-      <section className='form' id='form'>
-        <form onSubmit={handleSubmit}>
+      <section className='form'>
+        <form id='form' onSubmit={handleSubmit}>
           <label>CARDHOLDER NAME</label>
           <div className="form__input" id='inputName'>
             <input type="text"
@@ -211,10 +211,10 @@ function App() {
           </div>
           <button type="submit">Confirm</button>
         </form>
-      </section>
 
-      <section id='formSubmitted' className='form__submitted'>
-        <FormSubmitted />
+        <div className='form__submitted' id='formSubmitted'>
+          <FormSubmitted />
+        </div>
       </section>
     </main>
   )
