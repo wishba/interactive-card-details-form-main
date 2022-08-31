@@ -171,10 +171,6 @@ function App() {
               </div>
             </div>
 
-            {/* kosong bener = kosong */}
-            {/* non    bener = non */}
-            {/* bener  bener = boner */}
-
             <div className="form__flex-right">
               <div className="form__input" id='inputCVC'>
                 <input type="text"
@@ -207,10 +203,6 @@ function App() {
 
           <div className="form__flex">
             <div className="form__flex-left">
-              {/* <p className='form__message' id="errorMM">error message</p>
-              <p className='form__message' id="errorYY">error message</p>
-              <p className='form__message' id="errorMM"></p>
-              <p className='form__message' id="errorYY"></p> */}
               <p className='form__message' id="errorDate">error message</p>
             </div>
             <div className="form__flex-right">

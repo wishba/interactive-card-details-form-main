@@ -32,7 +32,7 @@ body {
   background-image: url(images/bg-main-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 20em;
+  height: 12em;
 }
 
 .card>* {
@@ -47,11 +47,11 @@ body {
   background-image: url(images/bg-card-back.png);
   background-size: 15em;
   background-position: center;
-}
-
-.card__cvc {
-  margin-top: 2.425em;
-  margin-left: 10em;
+  position: absolute;
+  z-index: 0;
+  top: 1.5em;
+  left: 50%;
+  transform: translateX(-40%);
 }
 
 .card__front {
@@ -60,6 +60,16 @@ body {
     url(images/bg-card-front.png);
   background-size: 3em, 15em;
   background-position: top 1em left 1em, center;
+  position: absolute;
+  z-index: 1;
+  top: 6.2em;
+  left: 50%;
+  transform: translateX(-60%);
+}
+
+.card__cvc {
+  margin-top: 2.425em;
+  margin-left: 10em;
 }
 
 .card__front-container {
