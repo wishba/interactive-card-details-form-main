@@ -81,11 +81,15 @@ function App() {
                   document.getElementById('errorNumber').innerHTML = `Can't be blank`;
                   document.getElementById('errorNumber').classList.add('form__message-error');
                   document.getElementById('inputNumber').classList.add('form__input-error');
-                } else if (e.target.value.match(/[^0-9\s]/)) {
+                }
+
+                if (e.target.value.match(/\D/)) {
                   document.getElementById('errorNumber').innerHTML = 'Wrong format, numbers only';
                   document.getElementById('errorNumber').classList.add('form__message-error');
                   document.getElementById('inputNumber').classList.add('form__input-error');
-                } else {
+                }
+
+                if (e.target.value.match(/\d/)) {
                   document.getElementById('errorNumber').innerHTML = 'Correct format';
                   document.getElementById('errorNumber').classList.remove('form__message-error');
                   document.getElementById('inputNumber').classList.remove('form__input-error');
