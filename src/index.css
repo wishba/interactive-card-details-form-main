@@ -28,8 +28,20 @@ body {
   padding: 0;
 }
 
+.card__front {
+  width: 15em;
+}
+
+.card__front-container {
+  display: flex;
+}
+
 .card__number {
   font-size: 18px;
+}
+
+.card__name {
+  width: 10em;
 }
 
 .form {
