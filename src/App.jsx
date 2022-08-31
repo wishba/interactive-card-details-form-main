@@ -132,7 +132,6 @@ function App() {
                   }}
                 />
               </div>
-              {/* <p className='form__message' id="errorMM">error message</p> */}
               <div className="form__input" id='inputYY'>
                 <input type="text"
                   placeholder="YY"
@@ -160,7 +159,6 @@ function App() {
                   }}
                 />
               </div>
-              {/* <p className='form__message' id="errorYY">error message</p> */}
             </div>
 
             <div className="form__flex-right">
@@ -190,10 +188,19 @@ function App() {
                   }}
                 />
               </div>
-              {/* <p className='form__message' id="errorCVC">error message</p> */}
             </div>
           </div>
 
+          <div className="form__flex">
+            <div className="form__flex-left">
+              <p className='form__message' id="errorMM">error message</p>
+              <p className='form__message' id="errorYY">error message</p>
+            </div>
+            <div className="form__flex-right">
+              <p className='form__message' id="errorCVC">error message</p>
+
+            </div>
+          </div>
           <button type="submit">Confirm</button>
         </form>
       </section>
