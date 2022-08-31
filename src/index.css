@@ -28,21 +28,31 @@ body {
   padding: 0;
 }
 
-.card {
+.card>* {
   color: var(--clr-cardtxt);
+  width: 15em;
+  height: 8.25em;
+  background-repeat: no-repeat;
+  padding: 1em;
+}
+
+.card__back {
+  background-image: url(images/bg-card-back.png);
+  background-size: 15em;
+  background-position: center;
+}
+
+.card__cvc {
+  margin-top: 2.425em;
+  margin-left: 10em;
 }
 
 .card__front {
-  width: 15em;
-  height: 8.25em;
-  /* background-color: red; */
   background-image:
     url(images/card-logo.svg),
     url(images/bg-card-front.png);
   background-size: 3em, 15em;
-  background-repeat: no-repeat;
   background-position: top 1em left 1em, center;
-  padding: 1em;
 }
 
 .card__front-container {
