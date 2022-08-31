@@ -116,6 +116,7 @@ body {
   background-color: var(--clr-inputbdr);
   padding: 2px;
   margin-top: .25em;
+  border-radius: 10px;
 }
 
 .form__input.form__input-error {
@@ -132,6 +133,7 @@ input {
   color: var(--clr-inputtxt);
   width: 100%;
   padding: .5em 1em;
+  border-radius: 9px;
 }
 
 input:focus {
@@ -161,4 +163,5 @@ button {
   background-color: var(--clr-button);
   color: var(--clr-cardtxt);
   font: inherit;
+  border-radius: 10px;
 }
