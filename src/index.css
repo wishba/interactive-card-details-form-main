@@ -88,12 +88,10 @@ body {
 .card__name {
   font-size: 10px;
   width: 17.5em;
-  margin: 0;
 }
 
 .card__date {
   font-size: 10px;
-  margin: 0;
 }
 
 .form,
