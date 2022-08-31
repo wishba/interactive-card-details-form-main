@@ -117,17 +117,23 @@ function App() {
 
                   onBlur={(e) => {
                     if (e.target.value === '') {
-                      document.getElementById('errorMM').innerHTML = `Can't be blank`;
-                      document.getElementById('errorMM').classList.add('form__message-error');
+                      document.getElementById('errorDate').innerHTML = `Can't be blank`;
+                      document.getElementById('errorDate').classList.add('form__message-error');
                       document.getElementById('inputMM').classList.add('form__input-error');
                     } else if (e.target.value.match(/\D/)) {
-                      document.getElementById('errorMM').innerHTML = 'Wrong format, numbers only';
-                      document.getElementById('errorMM').classList.add('form__message-error');
+                      document.getElementById('errorDate').innerHTML = 'Wrong format, numbers only';
+                      document.getElementById('errorDate').classList.add('form__message-error');
                       document.getElementById('inputMM').classList.add('form__input-error');
                     } else {
-                      document.getElementById('errorMM').innerHTML = 'Correct format';
-                      document.getElementById('errorMM').classList.remove('form__message-error');
+                      document.getElementById('errorDate').innerHTML = 'Correct format';
+                      document.getElementById('errorDate').classList.remove('form__message-error');
                       document.getElementById('inputMM').classList.remove('form__input-error');
+                    }
+
+                    if (document.getElementById('inputYY').classList == 'form__input-error') {
+                      // document.getElementById('errorDate').classList.add('form__message-error');
+                    } else {
+                      // document.getElementById('errorDate').classList.remove('form__message-error');
                     }
                   }}
                 />
@@ -144,17 +150,22 @@ function App() {
 
                   onBlur={(e) => {
                     if (e.target.value === '') {
-                      document.getElementById('errorYY').innerHTML = `Can't be blank`;
-                      document.getElementById('errorYY').classList.add('form__message-error');
+                      document.getElementById('errorDate').innerHTML = `Can't be blank`;
+                      document.getElementById('errorDate').classList.add('form__message-error');
                       document.getElementById('inputYY').classList.add('form__input-error');
                     } else if (e.target.value.match(/\D/)) {
-                      document.getElementById('errorYY').innerHTML = 'Wrong format, numbers only';
-                      document.getElementById('errorYY').classList.add('form__message-error');
+                      document.getElementById('errorDate').innerHTML = 'Wrong format, numbers only';
+                      document.getElementById('errorDate').classList.add('form__message-error');
                       document.getElementById('inputYY').classList.add('form__input-error');
                     } else {
-                      document.getElementById('errorYY').innerHTML = 'Correct format';
-                      document.getElementById('errorYY').classList.remove('form__message-error');
+                      document.getElementById('errorDate').innerHTML = 'Correct format';
+                      document.getElementById('errorDate').classList.remove('form__message-error');
                       document.getElementById('inputYY').classList.remove('form__input-error');
+                    }
+                    if (document.getElementById('inputMM').classList == 'form__input-error') {
+                      // document.getElementById('errorDate').classList.add('form__message-error');
+                    } else {
+                      // document.getElementById('errorDate').classList.remove('form__message-error');
                     }
                   }}
                 />
@@ -193,8 +204,11 @@ function App() {
 
           <div className="form__flex">
             <div className="form__flex-left">
-              <p className='form__message' id="errorMM">error message</p>
+              {/* <p className='form__message' id="errorMM">error message</p>
               <p className='form__message' id="errorYY">error message</p>
+              <p className='form__message' id="errorMM"></p>
+              <p className='form__message' id="errorYY"></p> */}
+              <p className='form__message' id="errorDate">error message</p>
             </div>
             <div className="form__flex-right">
               <p className='form__message' id="errorCVC">error message</p>
