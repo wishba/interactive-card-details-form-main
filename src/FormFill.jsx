@@ -130,7 +130,7 @@ export default function FormFill() {
                       document.getElementById('inputMM').classList.add('form__input-error');
                     }
 
-                    if (e.target.value.match(/\d/) && document.getElementById('inputYY').classList == ('form__input-error')) {
+                    if (e.target.value.match(/\d/)) {
                       document.getElementById('errorDate').innerHTML = 'Correct format';
                       document.getElementById('errorDate').classList.remove('form__message-error');
                       document.getElementById('inputMM').classList.remove('form__input-error');
@@ -161,7 +161,7 @@ export default function FormFill() {
                       document.getElementById('inputYY').classList.add('form__input-error');
                     }
 
-                    if (e.target.value.match(/\d/) && document.getElementById('inputMM').classList == ('form__input-error')) {
+                    if (e.target.value.match(/\d/)) {
                       document.getElementById('errorDate').innerHTML = 'Correct format';
                       document.getElementById('errorDate').classList.remove('form__message-error');
                       document.getElementById('inputYY').classList.remove('form__input-error');
