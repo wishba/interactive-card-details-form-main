@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/interactive-card-detail-with-usestate-hook-aQvI1DS1Rp)
+- Live Site URL: [Live site URL](https://wishba.github.io/interactive-card-details-form-main/)
 
 ## My process
 
